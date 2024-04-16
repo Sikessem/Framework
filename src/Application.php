@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Sikessem;
 
-use Closure;
 use Illuminate\Contracts\Config\Repository as ConfigContract;
 use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
 use Illuminate\Contracts\Http\Kernel as HttpKernel;
@@ -16,41 +15,14 @@ use Symfony\Component\Console\Output\ConsoleOutput;
 
 class Application extends BaseApplication implements IsApplication
 {
-    /**
-     * @var string
-     */
-    protected $namespace = 'App\\';
-
-    public function __construct(?string $basePath = null)
-    {
-        if (! $basePath) {
-            $basePath = backtrace(limit: 1)->getDirectory();
-        }
-
-        parent::__construct($basePath);
-
-        /** @var string */
-        $langPath = value(Closure::bind(function (): string {
-            $directory = is_dir($this->resourcePath('locales'))
-            ? $this->resourcePath('locales')
-            : $this->resourcePath('i18n');
-            if (is_dir($directory)) {
-                return $directory;
-            }
-
-            return $this->basePath('lang');
-        }, $this));
-        $this->useLangPath($langPath);
-    }
-
     public function run(): void
     {
         define('LARAVEL_START', microtime(true));
 
-        $this->runningInConsole() ? $this->handleCommand() : $this->handleRequest();
+        $this->runningInConsole() ? $this->processCommand() : $this->processRequest();
     }
 
-    public function handleCommand(): void
+    public function processCommand(): void
     {
         $kernel = $this->makeConsoleKernel();
 
@@ -64,7 +36,7 @@ class Application extends BaseApplication implements IsApplication
         exit($status);
     }
 
-    public function handleRequest(): void
+    public function processRequest(): void
     {
         $kernel = $this->makeHttpKernel();
 

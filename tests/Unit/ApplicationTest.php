@@ -7,7 +7,7 @@ use Sikessem\Application;
 use Sikessem\Contracts\IsApplication;
 
 beforeEach(function () {
-    $app = new Application(dirname(__DIR__));
+    $app = Application::configure()->create(dirname(__DIR__));
 
     $app->singleton(
         ConsoleKernelContract::class,
