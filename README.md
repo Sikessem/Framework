@@ -78,7 +78,7 @@ Install [Framework](https://packagist.org/packages/sikessem/framework) using [Co
     ```json
     {
         "require" : {
-            "sikessem/framework": "^0.4"
+            "sikessem/framework": "^0.5"
         }
     }
     ```
