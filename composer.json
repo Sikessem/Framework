@@ -24,7 +24,8 @@
     },
     "require": {
         "php": ">=8.2",
-        "laravel/framework": "^12.7"
+        "laravel/framework": "^12.7",
+        "laravel/tinker": "^2.10"
     },
     "require-dev": {
         "siguici/laravel-devtools": "^1.2"
