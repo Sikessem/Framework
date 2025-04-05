@@ -27,8 +27,8 @@ class Application extends BaseApplication implements IsApplication
         $kernel = $this->makeConsoleKernel();
 
         $status = $kernel->handle(
-            $input = new ArgvInput(),
-            new ConsoleOutput()
+            $input = new ArgvInput,
+            new ConsoleOutput
         );
 
         $kernel->terminate($input, $status);
