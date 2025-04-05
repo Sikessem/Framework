@@ -15,36 +15,6 @@
 
 </div>
 
-[sikessem-logo]: https://github.com/sikessem/art/blob/HEAD/images/sikessem.svg
-[sikessem-link]: https://github.com/sikessem "Sikessem"
-
-[php-icon]: https://img.shields.io/badge/PHP-ccc.svg?style=flat&logo=php
-[php-link]: https://github.com/sikessem/framework/search?l=php "PHP code"
-
-[packagist-version-icon]: https://img.shields.io/packagist/v/sikessem/framework
-[packagist-version-link]: https://packagist.org/packages/sikessem/framework "Framework Releases"
-
-[packagist-download-icon]: https://img.shields.io/packagist/dt/sikessem/framework
-[packagist-download-link]: https://packagist.org/packages/sikessem/framework "Framework Downloads"
-
-[enabled-icon]: https://img.shields.io/badge/Framework-enabled-brightgreen.svg?style=flat
-[enabled-link]: https://github.com/sikessem/framework "Framework enabled"
-
-[actions-icon]: https://github.com/sikessem/framework/workflows/CI/badge.svg
-[actions-link]: https://github.com/sikessem/framework/actions "Framework status"
-
-[pr-icon]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=brightgreen
-[pr-link]: [contrib-link] "PRs welcome!"
-
-[twitter-icon]: https://img.shields.io/twitter/follow/sikessem_tweets.svg?label=@sikessem_tweets
-[twitter-link]: https://twitter.com/intent/follow?screen_name=sikessem_tweets "Ping Sikessem"
-
-[license-icon]: https://img.shields.io/badge/license-MIT-blue.svg
-[license-link]: https://github.com/sikessem/framework/blob/HEAD/LICENSE "Framework License"
-[conduct-link]: https://github.com/sikessem/.github/blob/HEAD/CODE_OF_CONDUCT.md
-[contrib-link]: https://github.com/sikessem/.github/blob/HEAD/CONTRIBUTING.md
-[discuss-link]: https://github.com/orgs/sikessem/discussions
-
 ***
 
 # The Sikessem Framework
@@ -66,7 +36,7 @@ This framework is a Laravel customization for the [sikessem/skeleton](https://pa
 
 ## 📋 Requirements
 
-> - **Requires [PHP 8.2+](https://php.net/releases/)** (at least 8.2.20 recommended to avoid potential bugs).
+> - **Requires [PHP 8.2+](https://php.net/releases/)** (at least 8.2.28 recommended to avoid potential bugs).
 > - **Requires [Composer v2+](https://getcomposer.org/)** to manage PHP dependencies.
 
 ## ⚡️ Installation
@@ -78,7 +48,7 @@ Install [Framework](https://packagist.org/packages/sikessem/framework) using [Co
     ```json
     {
         "require" : {
-            "sikessem/framework": "^0.6"
+            "sikessem/framework": "^0.7"
         }
     }
     ```
@@ -119,3 +89,33 @@ If you discover a security vulnerability within [Sikessem](https://sikessem.com)
 ***
 
 <div align="center"><sub>Made with ❤︎ by <a href="https://twitter.com/intent/follow?screen_name=siguici" style="content:url(https://img.shields.io/twitter/follow/siguici.svg?label=@siguici);margin-bottom:-6px">@siguici</a>.</sub></div>
+
+[sikessem-logo]: https://github.com/sikessem/art/blob/HEAD/images/sikessem.svg
+[sikessem-link]: https://github.com/sikessem "Sikessem"
+
+[php-icon]: https://img.shields.io/badge/PHP-ccc.svg?style=flat&logo=php
+[php-link]: https://github.com/sikessem/framework/search?l=php "PHP code"
+
+[packagist-version-icon]: https://img.shields.io/packagist/v/sikessem/framework
+[packagist-version-link]: https://packagist.org/packages/sikessem/framework "Framework Releases"
+
+[packagist-download-icon]: https://img.shields.io/packagist/dt/sikessem/framework
+[packagist-download-link]: https://packagist.org/packages/sikessem/framework "Framework Downloads"
+
+[enabled-icon]: https://img.shields.io/badge/Framework-enabled-brightgreen.svg?style=flat
+[enabled-link]: https://github.com/sikessem/framework "Framework enabled"
+
+[actions-icon]: https://github.com/sikessem/framework/workflows/CI/badge.svg
+[actions-link]: https://github.com/sikessem/framework/actions "Framework status"
+
+[pr-icon]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=brightgreen
+[pr-link]: [contrib-link] "PRs welcome!"
+
+[twitter-icon]: https://img.shields.io/twitter/follow/sikessem_tweets.svg?label=@sikessem_tweets
+[twitter-link]: https://twitter.com/intent/follow?screen_name=sikessem_tweets "Ping Sikessem"
+
+[license-icon]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-link]: https://github.com/sikessem/framework/blob/HEAD/LICENSE "Framework License"
+[conduct-link]: https://github.com/sikessem/.github/blob/HEAD/CODE_OF_CONDUCT.md
+[contrib-link]: https://github.com/sikessem/.github/blob/HEAD/CONTRIBUTING.md
+[discuss-link]: https://github.com/orgs/sikessem/discussions
