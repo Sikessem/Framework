@@ -9,11 +9,11 @@ use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
 use Illuminate\Contracts\Http\Kernel as HttpKernel;
 use Illuminate\Foundation\Application as BaseApplication;
 use Illuminate\Http\Request;
-use Sikessem\Contracts\IsApplication;
+use Sikessem\Contracts\Application as ApplicationContract;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
-class Application extends BaseApplication implements IsApplication
+class Application extends BaseApplication implements ApplicationContract
 {
     public function run(): void
     {

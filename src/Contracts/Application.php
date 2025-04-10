@@ -6,7 +6,7 @@ namespace Sikessem\Contracts;
 
 use Closure;
 use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
-use Illuminate\Contracts\Foundation\Application as ApplicationContract;
+use Illuminate\Contracts\Foundation\Application as BaseApplication;
 use Illuminate\Contracts\Foundation\CachesConfiguration;
 use Illuminate\Contracts\Foundation\CachesRoutes;
 use Illuminate\Contracts\Http\Kernel as HttpKernel;
@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
-interface IsApplication extends ApplicationContract, CachesConfiguration, CachesRoutes, HttpKernelInterface
+interface Application extends BaseApplication, CachesConfiguration, CachesRoutes, HttpKernelInterface
 {
     public function run(): void;
 
