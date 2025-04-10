@@ -1,5 +1,7 @@
 <?php
 
+namespace Sikessem\Tests\Unit;
+
 use Illuminate\Contracts\Console\Kernel as ConsoleKernelContract;
 use Illuminate\Foundation\Application as BaseApplication;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

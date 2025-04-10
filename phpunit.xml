@@ -4,12 +4,6 @@
     <testsuite name="Test Suite">
       <directory suffix="Test.php">./tests</directory>
     </testsuite>
-    <testsuite name="Feature Test Suite">
-      <directory suffix="Test.php">./tests/Feat</directory>
-    </testsuite>
-    <testsuite name="Unit Test Suite">
-      <directory suffix="Test.php">./tests/Unit</directory>
-    </testsuite>
   </testsuites>
   <coverage/>
   <php>
