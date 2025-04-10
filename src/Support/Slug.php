@@ -31,11 +31,11 @@ class Slug
         if (
             is_string($entity)
             || ($request->has($name) && $request->$name !== $entity->$name)
-            || $request->has('name') && $request->name !== $entity->name
-            || $request->has('title') && $request->title !== $entity->title
+            || $request->has('name') && $request->name !== $entity->$name
+            || $request->has('title') && $request->title !== $entity->$name
         ) {
             /** @var string */
-            $slug = ($request->$name ?: $request->name) ?: $request->title;
+            $slug = ($request->$name ?: $request->name) ?: $request->$name;
             $slug = self::make($slug, $entity, $name);
         }
 
