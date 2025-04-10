@@ -1,6 +1,6 @@
 <?php
 
-namespace Sikessem\Tests\Unit;
+namespace Sikessem\Tests;
 
 use Illuminate\Contracts\Console\Kernel as ConsoleKernelContract;
 use Illuminate\Foundation\Application;
