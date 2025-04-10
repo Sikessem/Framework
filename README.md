@@ -111,8 +111,8 @@ If you discover a security vulnerability within [Sikessem](https://sikessem.com)
 [pr-icon]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=brightgreen
 [pr-link]: [contrib-link] "PRs welcome!"
 
-[twitter-icon]: https://img.shields.io/twitter/follow/sikessem_tweets.svg?label=@sikessem_tweets
-[twitter-link]: https://twitter.com/intent/follow?screen_name=sikessem_tweets "Ping Sikessem"
+[twitter-icon]: https://img.shields.io/twitter/follow/SikessemHQ.svg?label=@SikessemHQ
+[twitter-link]: https://twitter.com/intent/follow?screen_name=SikessemHQ "Ping Sikessem"
 
 [license-icon]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-link]: https://github.com/sikessem/framework/blob/HEAD/LICENSE "Framework License"
