@@ -1,38 +1,26 @@
-<div align="center">
+# The [<img src="https://github.com/sikessem/art/blob/HEAD/images/logo.svg" alt="Sikessem" height="24" />](https://github.com/Sikessem "Sikessem") Framework
 
-[![sikessem-logo]][sikessem-link]
-
-<br/>
+This framework is a [Laravel](https://laravel.com) customization for [Sikessem/Starter](https://packagist.org/packages/sikessem/starter).
 
 [![php-icon]][php-link]
 [![packagist-version-icon]][packagist-version-link]
 [![packagist-download-icon]][packagist-download-link]
 [![license-icon]][license-link]
-[![enabled-icon]][enabled-link]
 [![actions-icon]][actions-link]
-[![pr-icon]][pr-link]
 [![twitter-icon]][twitter-link]
-
-</div>
 
 ***
 
-# The Sikessem Framework
-
-This framework is a Laravel customization for the [sikessem/skeleton](https://packagist.org/packages/sikessem/skeleton).
-
 ## 🔖 Contents
 
-- [The Sikessem Framework](#the-sikessem-framework)
-  - [🔖 Contents](#-contents)
-  - [📋 Requirements](#-requirements)
-  - [⚡️ Installation](#️-installation)
-  - [👏 Contribution](#-contribution)
-    - [Code of Conduct](#code-of-conduct)
-    - [👥 Contributing Guide](#-contributing-guide)
-    - [🔒️ Good First Issues](#️-good-first-issues)
-    - [💬 Discussions](#-discussions)
-  - [🔐 Security Reports](#-security-reports)
+- [📋 Requirements](#-requirements)
+- [⚡️ Installation](#️-installation)
+- [👏 Contribution](#-contribution)
+- [Code of Conduct](#code-of-conduct)
+- [👥 Contributing Guide](#-contributing-guide)
+- [🔒️ Good First Issues](#️-good-first-issues)
+- [💬 Discussions](#-discussions)
+- [🔐 Security Reports](#-security-reports)
 
 ## 📋 Requirements
 
@@ -90,9 +78,6 @@ If you discover a security vulnerability within [Sikessem](https://sikessem.com)
 
 <div align="center"><sub>Made with ❤︎ by <a href="https://twitter.com/intent/follow?screen_name=siguici" style="content:url(https://img.shields.io/twitter/follow/siguici.svg?label=@siguici);margin-bottom:-6px">@siguici</a>.</sub></div>
 
-[sikessem-logo]: https://github.com/sikessem/art/blob/HEAD/images/sikessem.svg
-[sikessem-link]: https://github.com/sikessem "Sikessem"
-
 [php-icon]: https://img.shields.io/badge/PHP-ccc.svg?style=flat&logo=php
 [php-link]: https://github.com/sikessem/framework/search?l=php "PHP code"
 
@@ -102,14 +87,8 @@ If you discover a security vulnerability within [Sikessem](https://sikessem.com)
 [packagist-download-icon]: https://img.shields.io/packagist/dt/sikessem/framework
 [packagist-download-link]: https://packagist.org/packages/sikessem/framework "Framework Downloads"
 
-[enabled-icon]: https://img.shields.io/badge/Framework-enabled-brightgreen.svg?style=flat
-[enabled-link]: https://github.com/sikessem/framework "Framework enabled"
-
 [actions-icon]: https://github.com/sikessem/framework/workflows/CI/badge.svg
 [actions-link]: https://github.com/sikessem/framework/actions "Framework status"
-
-[pr-icon]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=brightgreen
-[pr-link]: [contrib-link] "PRs welcome!"
 
 [twitter-icon]: https://img.shields.io/twitter/follow/SikessemHQ.svg?label=@SikessemHQ
 [twitter-link]: https://twitter.com/intent/follow?screen_name=SikessemHQ "Ping Sikessem"
