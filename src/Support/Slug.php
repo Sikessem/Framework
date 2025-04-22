@@ -8,13 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Stringable;
 
 class Slug
 {
     /**
      * @param  array<string,mixed>  $data
      */
-    public static function update(Request|FormRequest $request, string|Model $entity, ?array &$data = null, string $name = 'slug'): ?string
+    public static function update(Request|FormRequest $request, string|Model $entity, ?array &$data = null, string $name = 'slug'): null|string|Stringable
     {
         $slug = self::create($request, $entity);
         if ($slug && isset($data)) {
@@ -24,7 +25,7 @@ class Slug
         return $slug;
     }
 
-    public static function create(Request|FormRequest $request, string|Model $entity, string $name = 'slug'): ?string
+    public static function create(Request|FormRequest $request, string|Model $entity, string $name = 'slug'): null|string|Stringable
     {
         $slug = null;
 
@@ -42,7 +43,7 @@ class Slug
         return $slug;
     }
 
-    public static function make(string $slug, string|Model $entity, string $name = 'slug'): ?string
+    public static function make(string $slug, string|Model $entity, string $name = 'slug'): null|string|Stringable
     {
         $slug = Str::of($slug)->slug('-');
 
