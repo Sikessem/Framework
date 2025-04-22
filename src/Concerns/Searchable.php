@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Sikessem\Concerns;
 
 use Sikessem\Support\Search;
