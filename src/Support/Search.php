@@ -16,7 +16,7 @@ class Search
         $query = preg_replace('/(\s+)/', '%', $query) ?: $query;
         $query = Str::ascii($query);
 
-        if (config('database.default') === 'pgsql') {
+        if (DB::connection()->getDriverName() === 'pgsql') {
             $builder = $builder->where(DB::raw("unaccent($field)"), 'ilike', "%$query%");
 
             foreach ($fields as $field) {
