@@ -25,11 +25,11 @@
     "require": {
         "php": ">=8.2",
         "laravel/folio": "^1.1",
-        "laravel/framework": "^12.7",
+        "laravel/framework": "^12.24",
         "laravel/tinker": "^2.10"
     },
     "require-dev": {
-        "siguici/laravel-devtools": "^1.2"
+        "siguici/laravel-devtools": "^1.4"
     },
     "autoload": {
         "psr-4": {
