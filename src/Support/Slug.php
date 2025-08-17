@@ -7,6 +7,7 @@ namespace Sikessem\Support;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Support\Stringable;
 
@@ -43,15 +44,46 @@ class Slug
         return $slug;
     }
 
-    public static function make(string $slug, string|Model $entity, string $name = 'slug'): null|string|Stringable
+    /**
+     * Generate a unique slug for a given model and column.
+     *
+     * Supports:
+     *  - PostgreSQL (~ operator)
+     *  - MySQL / MariaDB (REGEXP)
+     *  - Fallback using LIKE for other databases
+     *
+     * @param  class-string<Model>|Model  $entity
+     */
+    public static function make(string $base, string|Model $entity, string $column = 'slug'): null|string|Stringable
     {
-        $slug = Str::of($slug)->slug('-');
+        $slug = Str::slug($base, '-');
 
-        if ($entity::where($name, $slug)->exists()) {
-            $count = $entity::whereRaw("$name REGEXP '^{$slug}(-[0-9]*)?$'")->count();
-            $slug = $count ? "{$slug}-{$count}" : $slug;
+        /** @var \Illuminate\Database\Eloquent\Builder $query */
+        $query = is_string($entity) ? $entity::query() : $entity->newQuery();
+
+        if ($query->where($column, $slug)->doesntExist()) {
+            return $slug;
         }
 
-        return $slug;
+        $pattern = '^'.preg_quote($slug, '/').'(-[0-9]+)?$';
+        $driver = DB::connection()->getDriverName();
+
+        $query = match ($driver) {
+            'pgsql' => $query->whereRaw("\"$column\" ~ ?", [$pattern]),
+            'mysql', 'mariadb' => $query->whereRaw("`$column` REGEXP ?", [$pattern]),
+            default => $query->where($column, $slug)->orWhere($column, 'LIKE', $slug.'-%'),
+        };
+
+        $results = $query->pluck($column);
+        $max = 0;
+        $regex = '/^'.preg_quote($slug, '/').'-(\d+)$/';
+
+        foreach ($results as $result) {
+            if (preg_match($regex, $result, $matches)) {
+                $max = max($max, (int) $matches[1]);
+            }
+        }
+
+        return $slug.'-'.($max + 1);
     }
 }
