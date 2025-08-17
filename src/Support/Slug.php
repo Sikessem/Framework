@@ -48,7 +48,7 @@ class Slug
             || ($request->has('title') && $request->title !== $entity->$name)
         ) {
             /** @var string */
-            $source = $request->$name ?: $request->name ?: $request->title;
+            $source = ($request->$name ?: $request->name) ?: $request->title;
             $slug = self::make($source, $entity, $name);
         }
 
@@ -92,7 +92,7 @@ class Slug
         $regex = '/^'.preg_quote($slug, '/').'-(\d+)$/';
 
         foreach ($results as $result) {
-            if (preg_match($regex, $result, $matches)) {
+            if (preg_match($regex, (string) $result, $matches)) {
                 $max = max($max, (int) $matches[1]);
             }
         }
