@@ -86,4 +86,19 @@ class Slug
 
         return $slug.'-'.($max + 1);
     }
+
+    public static function auto(Model $model, ?string $source = null, string $sourceColumn = 'name', string $slugColumn = 'slug'): string
+    {
+        $source ??= $model->$sourceColumn ?? null;
+
+        if (! $source) {
+            throw new \InvalidArgumentException("Source column '{$sourceColumn}' is empty.");
+        }
+
+        $slug = self::make($source, $model, $slugColumn);
+
+        $model->$slugColumn = $slug;
+
+        return $slug;
+    }
 }
