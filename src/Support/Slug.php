@@ -78,22 +78,24 @@ class Slug
             return $slug;
         }
 
-        $pattern = '^'.preg_quote($slug, '/').'(-[0-9]+)?$';
+        $pattern = '^'.preg_quote($slug, '/').'-([0-9]+)$';
         $driver = DB::connection()->getDriverName();
 
+        $query = $query->where($column, $slug);
+
         $query = match ($driver) {
-            'pgsql' => $query->whereRaw("\"$column\" ~ ?", [$pattern]),
-            'mysql', 'mariadb' => $query->whereRaw("`$column` REGEXP ?", [$pattern]),
-            default => $query->where($column, $slug)->orWhere($column, 'LIKE', $slug.'-%'),
+            'pgsql' => $query->orWhereRaw("\"$column\" ~ ?", [$pattern]),
+            'mysql', 'mariadb' => $query->orWhereRaw("`$column` REGEXP ?", [$pattern]),
+            default => $query->orWhere($column, 'LIKE', $slug.'-%'),
         };
 
-        $results = $query->pluck($column);
+        $results = $query->pluck($column, 'id');
+        $regex = '/^'.preg_quote($slug, '/').'(?:-(\d+))?$/';
         $max = 0;
-        $regex = '/^'.preg_quote($slug, '/').'-(\d+)$/';
 
         foreach ($results as $result) {
             if (preg_match($regex, (string) $result, $matches)) {
-                $max = max($max, (int) $matches[1]);
+                $max = max($max, (int) ($matches[1] ?? 0));
             }
         }
 
