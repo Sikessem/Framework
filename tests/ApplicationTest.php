@@ -5,8 +5,8 @@ namespace Sikessem\Tests;
 use Illuminate\Contracts\Console\Kernel as ConsoleKernelContract;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use Sikessem\Application as ConcreteApplication;
 use Sikessem\Contracts\Application as ApplicationContract;
+use Sikessem\Foundation\Application as ConcreteApplication;
 
 beforeEach(function () {
     $app = ConcreteApplication::configure()->create();

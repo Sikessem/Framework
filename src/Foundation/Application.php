@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Sikessem;
+namespace Sikessem\Foundation;
 
 use Illuminate\Contracts\Config\Repository as ConfigContract;
 use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
