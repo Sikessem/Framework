@@ -45,7 +45,6 @@ class Upload
         }
 
         $finalUrl = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
-        curl_close($ch);
 
         $tempPath = tempnam(sys_get_temp_dir(), 'uploads');
         file_put_contents($tempPath, $data);

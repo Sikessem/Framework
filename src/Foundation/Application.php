@@ -71,6 +71,7 @@ class Application extends BaseApplication implements ApplicationContract
     /**
      * {@inheritDoc}
      */
+    #[\Override]
     public function path($path = '')
     {
         if (empty($this->appPath) && is_dir($this->rootDir('src'))) {
@@ -83,6 +84,7 @@ class Application extends BaseApplication implements ApplicationContract
     /**
      * {@inheritDoc}
      */
+    #[\Override]
     public function resourcePath($path = '')
     {
         if (is_dir($this->rootDir('res'))) {
@@ -112,6 +114,7 @@ class Application extends BaseApplication implements ApplicationContract
     /**
      * {@inheritDoc}
      */
+    #[\Override]
     public function viewPath($path = '')
     {
         /** @var ConfigContract */
