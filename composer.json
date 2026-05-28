@@ -1,6 +1,6 @@
 {
     "name": "sikessem/framework",
-    "description": "The Sikessem Framework.",
+    "description": "A Laravel customization for Sikessem projects.",
     "homepage": "https://packagist.org/packages/sikessem/framework",
     "keywords": [
         "sikessem",
@@ -18,9 +18,9 @@
     ],
     "support": {
         "email": "support@sikessem.com",
-        "source": "https://github.com/sikessem/framework",
-        "issues": "https://github.com/sikessem/framework/issues",
-        "chat": "https://github.com/orgs/sikessem/discussions"
+        "source": "https://github.com/Sikessem/Framework",
+        "issues": "https://github.com/Sikessem/Framework/issues",
+        "chat": "https://github.com/orgs/Sikessem/discussions"
     },
     "require": {
         "php": ">=8.2",
