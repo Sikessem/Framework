@@ -23,13 +23,13 @@
         "chat": "https://github.com/orgs/Sikessem/discussions"
     },
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.4",
         "laravel/folio": "^1.1",
-        "laravel/framework": "^12.24",
-        "laravel/tinker": "^2.10"
+        "laravel/framework": "^13.12",
+        "laravel/tinker": "^3.0"
     },
     "require-dev": {
-        "siguici/laravel-devtools": "^1.4"
+        "sikessem/devtools": "^1.6"
     },
     "autoload": {
         "psr-4": {

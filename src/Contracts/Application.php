@@ -9,9 +9,13 @@ use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
 use Illuminate\Contracts\Foundation\Application as BaseApplication;
 use Illuminate\Contracts\Foundation\CachesConfiguration;
 use Illuminate\Contracts\Foundation\CachesRoutes;
+use Illuminate\Contracts\Foundation\MaintenanceMode;
 use Illuminate\Contracts\Http\Kernel as HttpKernel;
+use Illuminate\Support\ServiceProvider;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 interface Application extends BaseApplication, CachesConfiguration, CachesRoutes, HttpKernelInterface
@@ -332,24 +336,24 @@ interface Application extends BaseApplication, CachesConfiguration, CachesRoutes
     /**
      * Register a service provider with the application.
      *
-     * @param  \Illuminate\Support\ServiceProvider|string  $provider
+     * @param  ServiceProvider|string  $provider
      * @param  bool  $force
-     * @return \Illuminate\Support\ServiceProvider
+     * @return ServiceProvider
      */
     public function register($provider, $force = false);
 
     /**
      * Get the registered service provider instance if it exists.
      *
-     * @param  \Illuminate\Support\ServiceProvider|string  $provider
-     * @return \Illuminate\Support\ServiceProvider|null
+     * @param  ServiceProvider|string  $provider
+     * @return ServiceProvider|null
      */
     public function getProvider($provider);
 
     /**
      * Get the registered service provider instances if any exist.
      *
-     * @param  \Illuminate\Support\ServiceProvider|string  $provider
+     * @param  ServiceProvider|string  $provider
      * @return mixed[]
      */
     public function getProviders($provider);
@@ -358,7 +362,7 @@ interface Application extends BaseApplication, CachesConfiguration, CachesRoutes
      * Resolve a service provider instance from the class name.
      *
      * @param  string  $provider
-     * @return \Illuminate\Support\ServiceProvider
+     * @return ServiceProvider
      */
     public function resolveProvider($provider);
 
@@ -512,7 +516,7 @@ interface Application extends BaseApplication, CachesConfiguration, CachesRoutes
     /**
      * Get an instance of the maintenance mode manager implementation.
      *
-     * @return \Illuminate\Contracts\Foundation\MaintenanceMode
+     * @return MaintenanceMode
      */
     public function maintenanceMode();
 
@@ -531,8 +535,8 @@ interface Application extends BaseApplication, CachesConfiguration, CachesRoutes
      * @param  mixed[]  $headers
      * @return never
      *
-     * @throws \Symfony\Component\HttpKernel\Exception\HttpException
-     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     * @throws HttpException
+     * @throws NotFoundHttpException
      */
     public function abort($code, $message = '', array $headers = []);
 

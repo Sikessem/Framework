@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Sikessem\Support;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;
@@ -71,7 +72,7 @@ class Slug
     {
         $slug = Str::slug($base, '-');
 
-        /** @var \Illuminate\Database\Eloquent\Builder $query */
+        /** @var Builder $query */
         $query = is_string($entity) ? $entity::query() : $entity->newQuery();
 
         if ($query->where($column, $slug)->doesntExist()) {
