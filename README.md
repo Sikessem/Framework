@@ -26,7 +26,8 @@ like the [Sikessem/Starter](https://packagist.org/packages/sikessem/starter) kit
 
 ## 📋 Requirements
 
-> - **Requires [PHP 8.2+](https://php.net/releases/)** (at least 8.2.28 recommended to avoid potential bugs).
+> - **Requires [PHP 8.4+](https://php.net/releases/)**
+(at least 8.4.21 recommended to avoid potential bugs).
 > - **Requires [Composer v2+](https://getcomposer.org/)** to manage PHP dependencies.
 
 ## ⚡️ Installation
@@ -38,7 +39,7 @@ Install [Framework](https://packagist.org/packages/sikessem/framework) using [Co
     ```json
     {
         "require" : {
-            "sikessem/framework": "^0.10"
+            "sikessem/framework": "^0.11"
         }
     }
     ```
@@ -51,20 +52,29 @@ Install [Framework](https://packagist.org/packages/sikessem/framework) using [Co
 
 ## 👏 Contribution
 
-The main purpose of this repository is to continue evolving Sikessem. We want to make contributing to this project as easy and transparent as possible, and we are grateful to the community for contributing bug fixes and improvements. Read below to learn how you can take part in improving Sikessem.
+The main purpose of this repository is to continue evolving Sikessem.
+We want to make contributing to this project as easy and transparent as possible,
+and we are grateful to the community for contributing bug fixes and improvements.
+Read below to learn how you can take part in improving Sikessem.
 
 ### [Code of Conduct][conduct-link]
 
-Sikessem has adopted a Code of Conduct that we expect project participants to adhere to.
-Please read the [full text][conduct-link] so that you can understand what actions will and will not be tolerated.
+Sikessem has adopted a Code of Conduct that
+we expect project participants to adhere to.
+Please read the [full text][conduct-link] so that you can understand
+what actions will and will not be tolerated.
 
 ### 👥 [Contributing Guide][contrib-link]
 
-Read our [**Contributing Guide**][contrib-link] to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to Sikessem.
+Read our [**Contributing Guide**][contrib-link] to learn about our development process,
+how to propose bugfixes and improvements, and how to build and test your changes to Sikessem.
 
 ### 🔒️ Good First Issues
 
-We have a list of [good first issues][gfi] that contain bugs which have a relatively limited scope. This is a great place to get started, gain experience, and get familiar with our contribution process.
+We have a list of [good first issues][gfi] that contain bugs
+which have a relatively limited scope.
+This is a great place to get started, gain experience,
+and get familiar with our contribution process.
 
 [gfi]: https://github.com/sikessem/framework/labels/good%20first%20issue
 
@@ -74,7 +84,9 @@ Larger discussions and proposals are discussed in [**sikessem/community**][discu
 
 ## 🔐 Security Reports
 
-If you discover a security vulnerability within [Sikessem](https://sikessem.com), please email [Sigui Kessé Emmanuel](https://github.com/siguici) at [siguici@proton.me](mailto:siguici@proton.me). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within [Sikessem](https://sikessem.com),
+please email [Sigui Kessé Emmanuel](https://github.com/siguici) at [siguici@proton.me](mailto:siguici@proton.me).
+All security vulnerabilities will be promptly addressed.
 
 ***
 
