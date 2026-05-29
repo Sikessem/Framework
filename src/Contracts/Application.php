@@ -32,8 +32,6 @@ interface Application extends BaseApplication, CachesConfiguration, CachesRoutes
 
     public function makeHttpKernel(): HttpKernel;
 
-    public function rootDir(string $path = ''): string;
-
     /**
      * Get the path to the application "app" directory.
      *

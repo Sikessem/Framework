@@ -74,8 +74,8 @@ class Application extends BaseApplication implements ApplicationContract
     #[\Override]
     public function path($path = '')
     {
-        if (empty($this->appPath) && is_dir($this->rootDir('src'))) {
-            $this->appPath = $this->rootDir('src');
+        if (empty($this->appPath) && is_dir($this->basePath('src'))) {
+            $this->useAppPath($this->basePath('src'));
         }
 
         return parent::path($path);
@@ -87,8 +87,8 @@ class Application extends BaseApplication implements ApplicationContract
     #[\Override]
     public function resourcePath($path = '')
     {
-        if (is_dir($this->rootDir('res'))) {
-            return $this->rootDir('res').($path !== '' ? DIRECTORY_SEPARATOR.$path : '');
+        if (is_dir($this->path('resources'))) {
+            return $this->joinPaths($this->path('resources'), $path);
         }
 
         return parent::resourcePath($path);
@@ -99,16 +99,11 @@ class Application extends BaseApplication implements ApplicationContract
      */
     public function templatePath(string $path = ''): string
     {
-        if (is_dir($this->rootDir('tpl'))) {
-            return $this->rootDir('tpl').($path !== '' ? DIRECTORY_SEPARATOR.$path : '');
+        if (is_dir($this->path('templates'))) {
+            return $this->joinPaths($this->path('templates'), $path);
         }
 
-        return $this->joinPaths($this->basePath('templates'), $path);
-    }
-
-    public function rootDir(string $path = ''): string
-    {
-        return $this->basePath.DIRECTORY_SEPARATOR.'app'.DIRECTORY_SEPARATOR.$path;
+        return $this->joinPaths($this->resourcePath('views'), $path);
     }
 
     /**
