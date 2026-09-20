@@ -13,7 +13,7 @@
         {
             "name": "Sigui Kessé Emmanuel",
             "email": "siguici@proton.me",
-            "homepage": "https://siguici.deno.dev"
+            "homepage": "https://siguici.github.io"
         }
     ],
     "support": {
@@ -24,8 +24,8 @@
     },
     "require": {
         "php": ">=8.4",
-        "laravel/folio": "^1.1",
-        "laravel/framework": "^13.12",
+        "laravel/folio": "^1.2",
+        "laravel/framework": "^13.32",
         "laravel/tinker": "^3.0"
     },
     "require-dev": {
